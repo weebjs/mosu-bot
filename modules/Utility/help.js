@@ -1,60 +1,76 @@
-const mongoose = require('mongoose');
-const Economy = require('../models/EconomySchema'); // Adjust the path as necessary
+const fs = require('fs');
+const path = require('path');
+const colors = require('../../config/config.json').colors;
+const moment = require('moment');
+const config = require('../../config/config.json');
 
 module.exports = {
-  name: 'balance',
-  description: 'Shows your wallet and bank balance.',
-  usage: '$balance',
-  async execute(message, args, client) {
-    const userId = message.author.id;
-    const guildId = message.guildID;
+    name: 'help',
+    description: 'Shows all available commands or info about a specific command.',
+    aliases: ["commands"],
+    usage: 'mosu help [command]',
+    async execute(message, args, client) {
+        const prefix = config.prefix + " ";
+        const modulesPath = path.join(__dirname, '..');
+        const categories = fs.readdirSync(modulesPath);
 
-    try {
-      let userEconomy = await Economy.findOne({ GuildId: guildId, User: userId });
+        if (args.length <= 2) {
+            const embed = {
+                title: 'Bot Commands',
+                description: "Here's all commands for Mosu! \n Prefix is \`mosu\`",
+                color: colors.red,
+                fields: [],
+                footer: {
+                    text: `Use ${prefix}help [command] for more info on a specific command.`
+                }
+            };
 
-      if (!userEconomy) {
-        // Create a new account if the user doesn't have one
-        userEconomy = new Economy({
-          GuildId: guildId,
-          User: userId,
-          Bank: 0,
-          Wallet: 100 // Starting balance in wallet
-        });
-        await userEconomy.save();
-      }
+            categories.forEach(category => {
+                const commands = fs.readdirSync(path.join(modulesPath, category))
+                    .filter(file => file.endsWith('.js'))
+                    .map(file => require(path.join(modulesPath, category, file)));
 
-      const wallet = userEconomy.Wallet;
-      const bank = userEconomy.Bank;
+                const commandList = commands.map(cmd => `\`${cmd.name}\``).join(', ');
 
-      const embed = {
-        title: `${message.author.username}'s Balance`,
-        fields: [
-          {
-            name: 'Wallet',
-            value: `${wallet} coins`,
-            inline: true
-          },
-          {
-            name: 'Bank',
-            value: `${bank} coins`,
-            inline: true
-          },
-          {
-            name: 'Total',
-            value: `${wallet + bank} coins`,
-            inline: false
-          }
-        ],
-        color: 0x00FF00, // Green color
-        footer: {
-          text: userEconomy.isNew ? "New account created!" : "Existing account"
+                embed.fields.push({
+                    name: `${category.charAt(0).toUpperCase() + category.slice(1)}`,
+                    value: commandList || 'No commands in this category.'
+                });
+            });
+
+            return message.createMessage({ embeds: [embed], replyMessageIds: [message.id] });
         }
-      };
 
-      await message.createMessage({ embeds: [embed], replyMessageIds: [message.id] });
-    } catch (err) {
-      console.error(err);
-      await throw new Error("An error occured while fetching the user's balance, Please try again later.");
+        const commandName = args[2].toLowerCase();
+        const command = client.commands.get(commandName) || 
+            Array.from(client.commands.values()).find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+
+        if (!command) {
+            const errorEmbed = {
+                title: 'Error! | Unknown Command!',
+                fields: [
+                    {
+                        name: 'Fix',
+                        value: '*Ensure you type the command or its alias correctly. If this doesn\'t fix the error, the command may not exist.*',
+                    },
+                ],
+                color: colors.red,
+            };
+            return message.createMessage({ embeds: [errorEmbed], replyMessageIds: [message.id], isPrivate: true });
+        }
+
+        const commandEmbed = {
+            title: `Command: ${command.name}`,
+            color: colors.blue,
+            fields: [
+                { name: 'Description', value: command.description || 'No description provided.' },
+                { name: 'Usage', value: command.usage || 'No usage provided.' },
+                { name: 'Aliases', value: command.aliases ? command.aliases.join(', ') : 'No aliases.' },
+                { name: 'Cooldown', value: command.cooldown ? 'Yes' : 'No' }
+            ],
+            timestamp: moment().toISOString()
+        };
+
+        message.createMessage({ embeds: [commandEmbed], replyMessageIds: [message.id] });
     }
-  }
 };
