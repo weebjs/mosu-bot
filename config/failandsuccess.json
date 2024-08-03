@@ -1,0 +1,34 @@
+{
+    "failureMessages": [
+      "Nobody was feeling generous today.",
+      "Beg harder, peasant.",
+      "Go beg someone else.",
+      "You beg for coins, but even the universe laughs at your desperation.",
+      "You kneel down and ask for mercy, but all you get is a boot to the face.",
+      "You plead for coins, and someone tosses you a single crumb like you're a stray dog.",
+      "You ask for help, and the only thing you receive is a sarcastic 'good luck with that!'",
+      "You beg for coins, but the only thing that drops is your dignity.",
+      "You shout into the void, and all it shouts back is 'Get a job!'",
+      "You beg for mercy, and the only response is a facepalm.",
+      "You ask for coins, and even the coins refuse to roll your way.",
+      "You beg like a child, but all you get is a 'no' and a laugh.",
+      "You kneel in the dirt, and the only thing that looks back is a rat."
+    ],
+    "successMessages": [
+      "Wow, someone actually felt sorry for you! Enjoy your coins!",
+      "Look at you, getting a donation! Don’t spend it all in one place!",
+      "You must have charmed someone! Don’t let it go to your head!",
+      "A kind soul decided to help you out! Try not to blow it this time!",
+      "Congratulations! You’ve managed to convince someone to give you something!",
+      "Well, well! Someone took pity on you. Use it wisely, okay?",
+      "You’ve got a donation! Don’t let it make you too cocky!",
+      "Someone clearly has a soft spot for you. Don’t ruin it!",
+      "You’ve hit the jackpot! Just don’t let it change who you are... too much.",
+      "Looks like your begging skills are finally paying off! Keep it up!",
+      "A miracle happened! Someone actually gave you something. Don’t waste it!",
+      "You must have a lucky charm! Just don’t let it go to your head!",
+      "Wow, a donation! Now you can almost afford a coffee!",
+      "Someone decided to be nice today. Don’t make them regret it!",
+      "You’ve got coins! Now go buy yourself something nice... or at least try!"
+    ]
+  }

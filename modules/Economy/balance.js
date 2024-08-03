@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Economy = require('../../Schemas/EconomySchema'); 
 const colors = require(`../../config/config.json`).colors;
-const moment = require('moment')
+const moment = require('moment');
 
 module.exports = {
     name: 'balance',
@@ -12,7 +12,7 @@ module.exports = {
         const guildId = message.guildID;
         const member = message.member;
         const userId = member.id;
-        const avatar = message.member.avatarURL
+        const avatar = message.member.avatarURL;
 
         try {
             let userEconomy = await Economy.findOne({ GuildId: guildId, User: userId });
@@ -30,6 +30,7 @@ module.exports = {
 
             const wallet = userEconomy.Wallet;
             const bank = userEconomy.Bank;
+            const maxBank = Economy.schema.path('Bank').options.max; // Get max bank from schema
 
             const formatNumber = (num) => num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
@@ -44,17 +45,17 @@ module.exports = {
                 fields: [
                     {
                         name: ':briefcase: | Wallet',
-                        value: `\`$${wallet}\``,
+                        value: `\`$${formatNumber(wallet)}\``,
                         inline: true
                     },
                     {
                         name: ':bank: | Bank',
-                        value: `\`$${bank}\``,
+                        value: `\`$${formatNumber(bank)}/${formatNumber(maxBank)}\``,
                         inline: true
                     },
                     {
                         name: ':chart_with_upwards_trend: | Total',
-                        value: `\`$${wallet + bank}\``,
+                        value: `\`$${formatNumber(wallet + bank)}\``,
                         inline: true
                     },
                     {

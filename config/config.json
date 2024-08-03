@@ -1,0 +1,11 @@
+{
+    "token": "gapi_EPicTWyAOlXBBBKbrM8yfRv9r3/x3AzoDQyEaWqlcf601lMcGxEslCwhkfxNlW0xir8JOPe6uHXBKmE1ngWR5g==",
+    "mongoURI": "mongodb+srv://umaru:umaru@cluster0.ikzk44n.mongodb.net/?retryWrites=true&w=majority",
+    "prefix": "mosu",
+    "colors": {
+      "red": "0xFF3131",
+      "green": "0x39FF14",
+      "default": "0x36363D",
+      "yellow": "0xFAED27"
+    }
+  }
