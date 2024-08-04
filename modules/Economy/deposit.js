@@ -41,10 +41,23 @@ module.exports = {
             }
 
             const wallet = userEconomy.Wallet;
+            const bank = userEconomy.Bank;
+            const maxBankCapacity = Economy.schema.path('Bank').options.max;
 
             // Handle 'all' keyword
             if (amount === 'all') {
-                amount = wallet;
+                const spaceInBank = maxBankCapacity - bank;
+                amount = Math.min(wallet, spaceInBank);
+                
+                if (amount === 0) {
+                    const embed = {
+                        title: 'Error',
+                        description: "Your bank is already at maximum capacity. You can't deposit any more.",
+                        color: colors.red,
+                        timestamp: moment().toISOString(),
+                    };
+                    return message.createMessage({ embeds: [embed], replyMessageIds: [message.id] });
+                }
             } else {
                 amount = parseInt(amount);
                 if (isNaN(amount) || amount <= 0) {
@@ -68,6 +81,17 @@ module.exports = {
                 return message.createMessage({ embeds: [embed], replyMessageIds: [message.id] });
             }
 
+            if (bank + amount > maxBankCapacity) {
+                const spaceInBank = maxBankCapacity - bank;
+                const embed = {
+                    title: 'Error',
+                    description: `Your bank is at **maximum** capacity and cannot hold any more than \`$${maxBankCapacity}\`.`,
+                    color: colors.red,
+                    timestamp: moment().toISOString(),
+                };
+                return message.createMessage({ embeds: [embed], replyMessageIds: [message.id] });
+            }
+
             // Update the user's economy
             userEconomy.Wallet -= amount;
             userEconomy.Bank += amount;
@@ -76,6 +100,7 @@ module.exports = {
             // Create the embed message for successful deposit
             const embed = {
                 title: `Successfully deposited \`$${amount}\` into your bank.`,
+                description: `Your bank balance is now \`$${userEconomy.Bank}\` out of \`$${maxBankCapacity}\`.`,
                 color: colors.green,
                 timestamp: moment().toISOString(),
             };

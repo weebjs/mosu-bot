@@ -1,0 +1,514 @@
+{
+  "items": [
+    {
+      "name": "Rusty Coin",
+      "rarity": 0.4,
+      "value": 5
+    },
+    {
+      "name": "Shiny Pebble",
+      "rarity": 0.3,
+      "value": 10
+    },
+    {
+      "name": "Old Book",
+      "rarity": 0.2,
+      "value": 20
+    },
+    {
+      "name": "Antique Watch",
+      "rarity": 0.07,
+      "value": 50
+    },
+    {
+      "name": "Golden Ring",
+      "rarity": 0.03,
+      "value": 100
+    },
+    {
+      "name": "Silver Necklace",
+      "rarity": 0.05,
+      "value": 40
+    },
+    {
+      "name": "Mystic Amulet",
+      "rarity": 0.01,
+      "value": 200
+    },
+    {
+      "name": "Ancient Scroll",
+      "rarity": 0.15,
+      "value": 30
+    },
+    {
+      "name": "Crystal Ball",
+      "rarity": 0.02,
+      "value": 150
+    },
+    {
+      "name": "Bronze Statue",
+      "rarity": 0.25,
+      "value": 25
+    },
+    {
+      "name": "Wooden Flute",
+      "rarity": 0.18,
+      "value": 15
+    },
+    {
+      "name": "Copper Bracelet",
+      "rarity": 0.22,
+      "value": 12
+    },
+    {
+      "name": "Leather Pouch",
+      "rarity": 0.35,
+      "value": 8
+    },
+    {
+      "name": "Glass Bead",
+      "rarity": 0.28,
+      "value": 7
+    },
+    {
+      "name": "Iron Key",
+      "rarity": 0.2,
+      "value": 18
+    },
+    {
+      "name": "Silk Handkerchief",
+      "rarity": 0.12,
+      "value": 22
+    },
+    {
+      "name": "Brass Compass",
+      "rarity": 0.09,
+      "value": 35
+    },
+    {
+      "name": "Silver Mirror",
+      "rarity": 0.06,
+      "value": 45
+    },
+    {
+      "name": "Jade Figurine",
+      "rarity": 0.04,
+      "value": 80
+    },
+    {
+      "name": "Pearl Earrings",
+      "rarity": 0.03,
+      "value": 90
+    },
+    {
+      "name": "Ivory Dice",
+      "rarity": 0.02,
+      "value": 120
+    },
+    {
+      "name": "Platinum Ring",
+      "rarity": 0.01,
+      "value": 180
+    },
+    {
+      "name": "Dragon Scale",
+      "rarity": 0.005,
+      "value": 250
+    },
+    {
+      "name": "Phoenix Feather",
+      "rarity": 0.003,
+      "value": 300
+    },
+    {
+      "name": "Mermaid's Tear",
+      "rarity": 0.002,
+      "value": 350
+    },
+    {
+      "name": "Unicorn Horn",
+      "rarity": 0.001,
+      "value": 500
+    },
+    {
+      "name": "Tin Whistle",
+      "rarity": 0.25,
+      "value": 6
+    },
+    {
+      "name": "Clay Pot",
+      "rarity": 0.3,
+      "value": 4
+    },
+    {
+      "name": "Bone Dice",
+      "rarity": 0.2,
+      "value": 8
+    },
+    {
+      "name": "Feather Quill",
+      "rarity": 0.15,
+      "value": 12
+    },
+    {
+      "name": "Wax Seal",
+      "rarity": 0.1,
+      "value": 15
+    },
+    {
+      "name": "Stone Arrowhead",
+      "rarity": 0.18,
+      "value": 10
+    },
+    {
+      "name": "Copper Coin",
+      "rarity": 0.4,
+      "value": 2
+    },
+    {
+      "name": "Iron Nail",
+      "rarity": 0.35,
+      "value": 3
+    },
+    {
+      "name": "Glass Bottle",
+      "rarity": 0.28,
+      "value": 5
+    },
+    {
+      "name": "Wooden Comb",
+      "rarity": 0.22,
+      "value": 7
+    },
+    {
+      "name": "Brass Button",
+      "rarity": 0.2,
+      "value": 8
+    },
+    {
+      "name": "Silver Spoon",
+      "rarity": 0.08,
+      "value": 25
+    },
+    {
+      "name": "Gold Tooth",
+      "rarity": 0.05,
+      "value": 40
+    },
+    {
+      "name": "Emerald Brooch",
+      "rarity": 0.02,
+      "value": 120
+    },
+    {
+      "name": "Ruby Pendant",
+      "rarity": 0.015,
+      "value": 150
+    },
+    {
+      "name": "Sapphire Ring",
+      "rarity": 0.01,
+      "value": 180
+    },
+    {
+      "name": "Diamond Earrings",
+      "rarity": 0.005,
+      "value": 250
+    },
+    {
+      "name": "Obsidian Knife",
+      "rarity": 0.08,
+      "value": 30
+    },
+    {
+      "name": "Bronze Mirror",
+      "rarity": 0.12,
+      "value": 20
+    },
+    {
+      "name": "Ivory Comb",
+      "rarity": 0.06,
+      "value": 35
+    },
+    {
+      "name": "Amber Necklace",
+      "rarity": 0.04,
+      "value": 60
+    },
+    {
+      "name": "Coral Bracelet",
+      "rarity": 0.05,
+      "value": 45
+    },
+    {
+      "name": "Turquoise Pendant",
+      "rarity": 0.03,
+      "value": 70
+    },
+    {
+      "name": "Opal Ring",
+      "rarity": 0.02,
+      "value": 100
+    },
+    {
+      "name": "Amethyst Tiara",
+      "rarity": 0.01,
+      "value": 160
+    },
+    {
+      "name": "Topaz Earrings",
+      "rarity": 0.015,
+      "value": 130
+    },
+    {
+      "name": "Garnet Brooch",
+      "rarity": 0.025,
+      "value": 90
+    },
+    {
+      "name": "Peridot Necklace",
+      "rarity": 0.03,
+      "value": 80
+    },
+    {
+      "name": "Aquamarine Ring",
+      "rarity": 0.02,
+      "value": 110
+    },
+    {
+      "name": "Citrine Pendant",
+      "rarity": 0.035,
+      "value": 75
+    },
+    {
+      "name": "Moonstone Bracelet",
+      "rarity": 0.04,
+      "value": 65
+    },
+    {
+      "name": "Lapis Lazuli Amulet",
+      "rarity": 0.025,
+      "value": 95
+    },
+    {
+      "name": "Malachite Figurine",
+      "rarity": 0.03,
+      "value": 85
+    },
+    {
+      "name": "Onyx Cameo",
+      "rarity": 0.035,
+      "value": 70
+    },
+    {
+      "name": "Tanzanite Earrings",
+      "rarity": 0.01,
+      "value": 170
+    },
+    {
+      "name": "Alexandrite Ring",
+      "rarity": 0.005,
+      "value": 220
+    },
+    {
+      "name": "Zircon Necklace",
+      "rarity": 0.02,
+      "value": 105
+    },
+    {
+      "name": "Tourmaline Bracelet",
+      "rarity": 0.025,
+      "value": 95
+    },
+    {
+      "name": "Chrysoberyl Pendant",
+      "rarity": 0.015,
+      "value": 140
+    },
+    {
+      "name": "Spinel Ring",
+      "rarity": 0.02,
+      "value": 115
+    },
+    {
+      "name": "Kunzite Earrings",
+      "rarity": 0.01,
+      "value": 165
+    },
+    {
+      "name": "Iolite Necklace",
+      "rarity": 0.03,
+      "value": 85
+    },
+    {
+      "name": "Rhodolite Garnet Brooch",
+      "rarity": 0.025,
+      "value": 100
+    },
+    {
+      "name": "Tsavorite Garnet Ring",
+      "rarity": 0.015,
+      "value": 145
+    },
+    {
+      "name": "Fire Opal Pendant",
+      "rarity": 0.01,
+      "value": 175
+    },
+    {
+      "name": "Black Opal Ring",
+      "rarity": 0.005,
+      "value": 230
+    },
+    {
+      "name": "Padparadscha Sapphire Earrings",
+      "rarity": 0.002,
+      "value": 320
+    },
+    {
+      "name": "Paraiba Tourmaline Necklace",
+      "rarity": 0.001,
+      "value": 400
+    },
+    {
+      "name": "Benitoite Ring",
+      "rarity": 0.0005,
+      "value": 450
+    },
+    {
+      "name": "Red Beryl Pendant",
+      "rarity": 0.0003,
+      "value": 500
+    },
+    {
+      "name": "Jadeite Bracelet",
+      "rarity": 0.008,
+      "value": 200
+    },
+    {
+      "name": "Taaffeite Ring",
+      "rarity": 0.0002,
+      "value": 550
+    },
+    {
+      "name": "Grandidierite Earrings",
+      "rarity": 0.0001,
+      "value": 600
+    },
+    {
+      "name": "Serendibite Necklace",
+      "rarity": 0.00005,
+      "value": 650
+    },
+    {
+      "name": "Blue Garnet Ring",
+      "rarity": 0.00003,
+      "value": 700
+    },
+    {
+      "name": "Red Diamond Pendant",
+      "rarity": 0.00001,
+      "value": 1000
+    },
+    {
+      "name": "Muonionalusta Meteorite Fragment",
+      "rarity": 0.0005,
+      "value": 300
+    },
+    {
+      "name": "Moldavite Talisman",
+      "rarity": 0.001,
+      "value": 250
+    },
+    {
+      "name": "Libyan Desert Glass Amulet",
+      "rarity": 0.0008,
+      "value": 280
+    },
+    {
+      "name": "Fulgurite Formation",
+      "rarity": 0.002,
+      "value": 180
+    },
+    {
+      "name": "Trinitite Shard",
+      "rarity": 0.0015,
+      "value": 200
+    },
+    {
+      "name": "Ammolite Fossil",
+      "rarity": 0.003,
+      "value": 150
+    },
+    {
+      "name": "Pallasite Slice",
+      "rarity": 0.0007,
+      "value": 290
+    },
+    {
+      "name": "Boji Stone Pair",
+      "rarity": 0.005,
+      "value": 100
+    },
+    {
+      "name": "Cintamani Stone",
+      "rarity": 0.0001,
+      "value": 800
+    },
+    {
+      "name": "Painite Crystal",
+      "rarity": 0.00002,
+      "value": 900
+    },
+    {
+      "name": "Blue Amber Pendant",
+      "rarity": 0.0003,
+      "value": 450
+    },
+    {
+      "name": "Larimar Cabochon",
+      "rarity": 0.001,
+      "value": 220
+    },
+    {
+      "name": "Charoite Sphere",
+      "rarity": 0.002,
+      "value": 170
+    },
+    {
+      "name": "Sugilite Carving",
+      "rarity": 0.003,
+      "value": 140
+    },
+    {
+      "name": "Rhodochrosite Stalactite Slice",
+      "rarity": 0.001,
+      "value": 230
+    },
+    {
+      "name": "Pietersite Tumbled Stone",
+      "rarity": 0.004,
+      "value": 110
+    },
+    {
+      "name": "Seraphinite Palmstone",
+      "rarity": 0.005,
+      "value": 95
+    },
+    {
+      "name": "Nuummite Rough",
+      "rarity": 0.003,
+      "value": 130
+    },
+    {
+      "name": "Quantum Quattro Silica Specimen",
+      "rarity": 0.002,
+      "value": 160
+    },
+    {
+      "name": "Ocean Jasper Orbicular",
+      "rarity": 0.004,
+      "value": 120
+    }
+  ]
+}

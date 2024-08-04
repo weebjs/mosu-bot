@@ -5,6 +5,7 @@ let EconomySchema = new Schema({
     User: { type: String, required: true },
     Bank: { type: Number, default: 0, min: 0, max: 100 },
     Wallet: { type: Number, default: 0, min: 0 },
+    Inventory: [{ name: String, quantity: Number }],
     lastBegTime: { type: Date, default: new Date(0) } // Add this line
 });
 
